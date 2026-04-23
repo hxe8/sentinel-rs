@@ -1,0 +1,17 @@
+[package]
+name = "sentinel-rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["OpenAI"]
+description = "A defensive file triage scanner written in Rust with a custom SHA-256 implementation"
+license = "MIT"
+repository = "https://github.com/yourname/sentinel-rs"
+readme = "README.md"
+keywords = ["security", "scanner", "forensics", "integrity", "rust"]
+categories = ["command-line-utilities", "filesystem"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
+panic = "abort"
